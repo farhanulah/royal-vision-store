@@ -27,13 +27,16 @@
 <section class="wrap" style="padding-top:30px">
   <div class="catbar">
     <label for="catSelect">Category</label>
-    <select id="catSelect" class="catselect">
-      <option value="sunglasses">🕶️ Sunglasses — 38 designs</option>
-      <option value="eyesight">👓 Eyesight Frames — 28 designs</option>
-      <option value="lenses">🔍 Lenses — Coming Soon</option>
-      <option value="ladies">👩 Ladies Glasses — 15 designs</option>
-      <option value="men">👨 Men Glasses — 51 designs</option>
-    </select>
+    <div class="catselect-wrap">
+      <select id="catSelect" class="catselect">
+        <option value="sunglasses">Sunglasses — 38 designs</option>
+        <option value="eyesight">Eyesight Frames — 28 designs</option>
+        <option value="lenses">Lenses — Coming Soon</option>
+        <option value="ladies">Ladies Glasses — 15 designs</option>
+        <option value="men">Men Glasses — 51 designs</option>
+      </select>
+      <span class="catchev" aria-hidden="true">▾</span>
+    </div>
     <span class="catcount" id="catCount"></span>
   </div>
   <div class="grid" id="catalogGrid" style="margin-top:26px"></div>

@@ -395,3 +395,12 @@ footer li{list-style:none;padding:4px 0}
 .catopts-home{grid-template-columns:repeat(5,1fr)}
 @media(max-width:1020px){.catopts-home{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.catopts-home{grid-template-columns:repeat(2,1fr)}.catbar{padding:14px}.catcount{white-space:normal}.comingsoon h3{font-size:32px}}
+
+/* --- catalog dropdown professional pass (24 Nov): visible gold chevron --- */
+.catbar{border:1px solid rgba(201,162,39,.45);box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:16px}
+.catbar label{text-transform:uppercase;letter-spacing:.22em;font-size:13px;color:var(--gold);font-family:Jost,sans-serif;font-weight:600}
+.catselect-wrap{position:relative;flex:1;min-width:230px}
+.catselect{appearance:none;-webkit-appearance:none;width:100%;background:linear-gradient(180deg,#16161e,#0c0c11);border:1px solid var(--gold);border-radius:12px;padding:15px 56px 15px 16px;font-size:17px;font-weight:500;letter-spacing:.02em;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.catchev{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(180deg,#e7c65a,#c9a227);color:#0a0a0a;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.45)}
+.catcount{background:rgba(201,162,39,.13);border:1px solid rgba(201,162,39,.5);color:#e9dcb2;border-radius:30px;padding:7px 15px;font-size:13.5px}
+@media(max-width:640px){.catselect{font-size:16px;padding:14px 52px 14px 14px}.catchev{width:30px;height:30px}}
