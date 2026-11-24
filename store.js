@@ -281,7 +281,7 @@ function showErr(msg){
   e.scrollIntoView({behavior:"smooth", block:"center"});
 }
 function orderText(f, oid){
-  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
+  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nProduct Pictures:\n" + Object.entries(cart).map(([id,q]) => IMG + byId(+id).img).join("\n") + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
 }
 document.getElementById("orderForm").addEventListener("submit", async e => {
   e.preventDefault();
@@ -292,7 +292,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
   btn.disabled = true; btn.textContent = "Placing order…";
   const oid = "RV-" + Date.now().toString().slice(-8);
   try {
-    const res = await fetch("https://formsubmit.co/ajax/fk402273@gmail.com", {
+    const res = await fetch("https://formsubmit.co/ajax/faisalsaim006@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
@@ -304,6 +304,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
         address: f.address,
         city: f.city,
         note: f.note || "—",
+        pictures: Object.entries(cart).map(([id,q]) => { const p = byId(+id); return p.name + ": " + IMG + p.img; }).join("\n"),
         items: itemsText(),
         total: fmt(cartTotal()),
         payment: "Cash on Delivery"
