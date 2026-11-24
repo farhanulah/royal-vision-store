@@ -403,11 +403,14 @@ document.addEventListener("click", e => {
   if (ph) { const card = ph.closest(".card"); const b = card && card.querySelector("[data-add]"); if (b) openPreview(+b.dataset.add); }
 });
 /* ---------- Catalog page (4 options) ---------- */
-const EYESIGHT = new Set([21, 22, 25, 26, 35, 38, 50, 51, 54, 55, 56, 60, 65]);
+/* Classification checked picture-by-picture (24 Nov): ids 1-38 have dark/tinted
+   lenses (sunglasses); ids 39-66 have clear/white lenses (eyesight frames). */
+const EYESIGHT = new Set(); for (let i = 39; i <= 66; i++) EYESIGHT.add(i);
 function catGroup(p, g){
   if (g === "sunglasses") return !EYESIGHT.has(p.id);
   if (g === "eyesight") return EYESIGHT.has(p.id);
   if (g === "ladies") return p.tag === "ladies";
+  if (g === "men") return p.tag !== "ladies";
   return false;
 }
 const catGrid = document.getElementById("catalogGrid");
@@ -416,17 +419,18 @@ if (catGrid) {
   function catCard(p){
     return '<article class="card"><div class="ph"><img loading="lazy" src="' + imgSrc(p) + '" alt="' + p.name + '"></div><div class="bd"><h3>' + p.name + '</h3><div class="price">' + fmt(p.price) + ' <small>COD AVAILABLE</small></div><div class="acts"><button class="add" data-add="' + p.id + '">Add to Cart</button><a class="wa-ic" target="_blank" rel="noopener" aria-label="Order on WhatsApp" href="https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent("I want to order: " + p.name + " (" + fmt(p.price) + ")") + '">' + waSvg + '</a></div></div></article>';
   }
+  const sel = document.getElementById("catSelect");
+  const countEl = document.getElementById("catCount");
+  const NAMES = {sunglasses: "Sunglasses", eyesight: "Eyesight Frames", ladies: "Ladies Glasses", men: "Men Glasses"};
   function showCat(g){
-    document.querySelectorAll(".catopt").forEach(b => b.classList.toggle("on", b.dataset.cat === g));
-    if (g === "lenses") { catGrid.innerHTML = ""; catGrid.style.display = "none"; if(lensPanel) lensPanel.style.display = "block"; return; }
+    if (sel) sel.value = g;
+    if (g === "lenses") { catGrid.innerHTML = ""; catGrid.style.display = "none"; if(lensPanel) lensPanel.style.display = "block"; if(countEl) countEl.textContent = "Lenses — Coming Soon"; return; }
     if (lensPanel) lensPanel.style.display = "none"; catGrid.style.display = "";
-    catGrid.innerHTML = PRODUCTS.filter(p => catGroup(p, g)).map(catCard).join("");
+    const list = PRODUCTS.filter(p => catGroup(p, g));
+    if (countEl) countEl.textContent = list.length + " designs — " + NAMES[g];
+    catGrid.innerHTML = list.map(catCard).join("");
   }
-  document.getElementById("catopts").addEventListener("click", e => {
-    const b = e.target.closest(".catopt"); if(!b) return;
-    showCat(b.dataset.cat);
-    document.getElementById("catalogGrid").scrollIntoView({behavior:"smooth", block:"start"});
-  });
+  if (sel) sel.addEventListener("change", () => showCat(sel.value));
   const h = (location.hash || "#sunglasses").slice(1);
-  showCat(["sunglasses","eyesight","lenses","ladies"].includes(h) ? h : "sunglasses");
+  showCat(["sunglasses","eyesight","lenses","ladies","men"].includes(h) ? h : "sunglasses");
 }

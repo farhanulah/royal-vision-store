@@ -23,27 +23,26 @@
   </div>
   <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html" class="active">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 </header>
-<div class="pagehero"><div class="crumb">Royal Vision · Catalog</div><h1>Shop Catalog</h1><p>Category chunein — sirf usi category ke designs nazar ayenge. Kisi bhi product ki picture par click karein: bara preview khulega, zoom karke har detail dekhein.</p></div>
-<section class="wrap" style="padding-top:34px">
-  <div class="catopts" id="catopts">
-    <button class="catopt" data-cat="sunglasses"><span class="ci">🕶️</span><b>Sunglasses</b><small>53 designs</small></button>
-    <button class="catopt" data-cat="eyesight"><span class="ci">👓</span><b>Eyesight Frames</b><small>13 designs</small></button>
-    <button class="catopt" data-cat="lenses"><span class="ci">🔍</span><b>Lenses</b><small>Power &amp; contact lenses</small></button>
-    <button class="catopt" data-cat="ladies"><span class="ci">👩</span><b>Ladies Glasses</b><small>15 designs</small></button>
+<div class="pagehero"><div class="crumb">Royal Vision · Catalog</div><h1>Shop Catalog</h1><p>Dropdown se category chunein — sirf usi category ke designs nazar ayenge. Kisi bhi product ki picture par click karein: bara preview khulega, zoom karke har detail dekhein.</p></div>
+<section class="wrap" style="padding-top:30px">
+  <div class="catbar">
+    <label for="catSelect">Category</label>
+    <select id="catSelect" class="catselect">
+      <option value="sunglasses">🕶️ Sunglasses — 38 designs</option>
+      <option value="eyesight">👓 Eyesight Frames — 28 designs</option>
+      <option value="lenses">🔍 Lenses — Coming Soon</option>
+      <option value="ladies">👩 Ladies Glasses — 15 designs</option>
+      <option value="men">👨 Men Glasses — 51 designs</option>
+    </select>
+    <span class="catcount" id="catCount"></span>
   </div>
-  <div class="grid" id="catalogGrid" style="margin-top:30px"></div>
-  <div id="lensPanel" style="display:none;margin-top:30px">
-    <div class="lensbox">
-      <h3>Power Lenses &amp; Contact Lenses</h3>
-      <p>Apni eyesight ke hisab se har qisam ke lenses hamare paas available hain. Price aap ke number (power) aur lens type par depend karti hai — WhatsApp par apna number bhejein, hum behtareen rate bata denge.</p>
-      <div class="lensgrid">
-        <div><b>Single Vision</b><span>Rozana istemal ke liye clear power lenses</span></div>
-        <div><b>Blue-Cut Lenses</b><span>Mobile aur computer ki roshni se hifazat</span></div>
-        <div><b>Bifocal / Progressive</b><span>Qareeb aur door — ek hi lens me</span></div>
-        <div><b>Contact Lenses</b><span>Monthly aur daily disposable options</span></div>
-      </div>
-      <a class="btn btn-gold" href="https://wa.me/923074400002?text=Assalam-o-Alaikum%21%20Mujhe%20lenses%20ki%20price%20maloom%20karni%20hai.%20Mera%20number%20%28power%29%20ye%20hai%3A%20" target="_blank" rel="noopener">WhatsApp Par Price Poochein</a>
-      <p style="margin-top:14px;color:#b7ae94">Ya dukaan par tashreef layein — <b style="color:#f3ead2">Free Eye Test</b> bhi ho jayega: Mian Bazar Chung, Multan Road, Lahore.</p>
+  <div class="grid" id="catalogGrid" style="margin-top:26px"></div>
+  <div id="lensPanel" style="display:none;margin-top:26px">
+    <div class="comingsoon">
+      <div class="cs-badge">LENSES</div>
+      <h3>Coming Soon</h3>
+      <p>Power lenses aur contact lenses jald hi catalog me aa rahe hain.<br>Abhi ke liye WhatsApp par rabta karein — hum aap ko behtareen rate bata denge.</p>
+      <a class="btn btn-gold" href="https://wa.me/923074400002?text=Assalam-o-Alaikum%21%20Mujhe%20lenses%20ke%20baray%20me%20maloomat%20chahiye." target="_blank" rel="noopener">WhatsApp Par Poochein</a>
     </div>
   </div>
 </section>
