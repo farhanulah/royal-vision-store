@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Vision — Luxury Branded Sunglasses | See the Royal Style</title>
+<meta name="description" content="Royal Vision — premium branded sunglasses & frames. DITA, PRADA, MAYBACH, Cartier, Louis Vuitton & more. Cash on Delivery, order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --black2:#111111; --black3:#1a1a1a;
+  --gold:#C9A227; --gold2:#D4AF37; --gold-soft:#e8cf7a;
+  --white:#ffffff; --off:#f6f2e9; --muted:#9a958a; --line:#2a2a2a;
+  --serif:'Playfair Display',serif; --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--off);color:#1c1a15;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans);cursor:pointer}
+h1,h2,h3,.serif{font-family:var(--serif)}
+.wrap{max-width:1220px;margin:0 auto;padding:0 20px}
+.gold{color:var(--gold2)}
+.eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:.72rem;font-weight:600;color:var(--gold)}
+.sec-head{text-align:center;margin-bottom:34px}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;margin:8px 0 6px}
+.sec-head p{color:#6b665b;max-width:560px;margin:0 auto}
+.gold-rule{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto 0}
+
+/* ---------- Offer bar ---------- */
+.offerbar{background:linear-gradient(90deg,#000,#1c1705,#000);color:var(--gold-soft);text-align:center;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 12px;border-bottom:1px solid #333}
+.offerbar b{color:#fff;font-weight:600}
+.offerbar .cd{color:#fff;background:#262626;border:1px solid var(--gold);border-radius:4px;padding:1px 8px;margin-left:8px;font-variant-numeric:tabular-nums;letter-spacing:.08em}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+.logo{font-family:var(--serif);font-size:1.45rem;font-weight:700;letter-spacing:.22em;color:var(--gold2);white-space:nowrap}
+.logo small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.5em;color:#cfc9ba;font-weight:400;margin-top:1px}
+nav.main{display:flex;gap:26px}
+nav.main a{color:#e9e4d6;font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
+nav.main a:hover{color:var(--gold2);border-color:var(--gold)}
+.cart-btn{position:relative;background:var(--gold);color:#000;border:none;border-radius:999px;padding:10px 18px;font-weight:600;letter-spacing:.06em;font-size:.9rem;display:flex;align-items:center;gap:8px;transition:.25s}
+.cart-btn:hover{background:var(--gold2)}
+.cart-count{background:#000;color:var(--gold2);border-radius:999px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;padding:0 5px}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:#fff;width:42px;height:42px;font-size:1.15rem}
+.mnav{display:none;background:#0d0d0d;border-top:1px solid var(--line);padding:10px 20px 16px}
+.mnav a{display:block;color:#e9e4d6;padding:10px 0;border-bottom:1px solid #1e1e1e;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem}
+.mnav.open{display:block}
+@media(max-width:860px){nav.main{display:none}.burger{display:block}}
+
+/* ---------- Hero ---------- */
+.hero{background:radial-gradient(1100px 480px at 85% -10%,#2b230a 0%,transparent 55%),linear-gradient(160deg,#0a0a0a,#141414 60%,#0a0a0a);color:#fff;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:64px 0 58px}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.12;font-weight:600;margin:14px 0 16px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p.sub{color:#cfc9ba;font-size:1.06rem;max-width:480px;font-weight:300}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 34px}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:14px 28px;font-size:.95rem;font-weight:600;letter-spacing:.05em;border:1px solid var(--gold);transition:.25s}
+.btn-gold{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#000}
+.btn-gold:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-line{background:transparent;color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.stats{display:flex;gap:0;border-top:1px solid #2c2c2c;max-width:520px}
+.stats div{flex:1;padding:16px 14px 0}
+.stats div+div{border-left:1px solid #2c2c2c}
+.stats b{font-family:var(--serif);font-size:1.35rem;color:var(--gold2);display:block}
+.stats span{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a49e8f}
+.hero-img{position:relative}
+.hero-img .frame{border:1px solid var(--gold);padding:12px;background:#101010}
+.hero-img img{width:100%;height:480px;object-fit:cover}
+.hero-img .tag{position:absolute;left:-14px;bottom:26px;background:var(--gold);color:#000;font-weight:600;padding:10px 18px;letter-spacing:.06em;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.hero-img .tag small{display:block;font-weight:400;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;padding:42px 0}.hero-img img{height:340px}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:#000;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);overflow:hidden;padding:13px 0}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scroll 30s linear infinite}
+.marquee span{font-family:var(--serif);font-size:1.05rem;letter-spacing:.3em;color:var(--gold2);white-space:nowrap;padding-right:.4em}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+section{padding:70px 0}
+.dark{background:var(--black);color:#f2eee3}
+.dark .sec-head p{color:#a49e8f}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cat{text-align:center;cursor:pointer;background:none;border:none;color:inherit}
+.cat .ring{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:2px solid var(--gold);padding:5px;background:#fff;transition:.3s}
+.cat img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.cat:hover .ring{transform:translateY(-5px);box-shadow:0 16px 30px rgba(0,0,0,.18)}
+.cat h3{margin-top:14px;font-size:1.15rem}
+.cat span{font-size:.82rem;color:#77705f;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:760px){.cats{grid-template-columns:repeat(2,1fr)}}
+
+/* shop controls */
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:26px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid #c9c2ae;background:#fff;color:#333;border-radius:999px;padding:8px 16px;font-size:.86rem;letter-spacing:.04em;transition:.2s}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:#000;color:var(--gold2);border-color:#000}
+.search-sort{display:flex;gap:10px;flex-wrap:wrap}
+.search-sort input,.search-sort select{border:1px solid #c9c2ae;border-radius:999px;padding:9px 16px;font-family:var(--sans);font-size:.9rem;background:#fff;outline:none}
+.search-sort input:focus,.search-sort select:focus{border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,1fr);gap:14px}}
+.card{background:#fff;border:1px solid #e6e0cd;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(20,16,4,.14);border-color:var(--gold)}
+.card .ph{aspect-ratio:1/1;overflow:hidden;background:#f3efe4}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .ph img{transform:scale(1.05)}
+.card .bd{padding:14px 15px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
+.card h3{font-size:1.02rem;font-weight:600;line-height:1.25}
+.card .price{font-family:var(--serif);font-size:1.12rem;color:#8a6d14;font-weight:700}
+.card .price small{font-family:var(--sans);font-weight:400;color:#99917c;font-size:.74rem;letter-spacing:.1em}
+.card .acts{display:flex;gap:8px;margin-top:auto;padding-top:10px}
+.add{flex:1;background:linear-gradient(180deg,var(--gold2),var(--gold));border:none;color:#000;font-weight:600;border-radius:9px;padding:11px 8px;font-size:.88rem;transition:.2s}
+.add:hover{filter:brightness(1.08)}
+.wa-ic{width:42px;border:1px solid #22a95c;background:#eafaf0;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;transition:.2s}
+.wa-ic:hover{background:#d7f5e2}
+.empty{grid-column:1/-1;text-align:center;color:#8a8474;padding:40px 0;font-size:1.02rem}
+
+/* spotlight */
+.spot{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.spot .frame{border:1px solid var(--gold);padding:12px;background:#101010}
+.spot .frame img{width:100%;height:440px;object-fit:cover}
+.spot h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:10px 0 12px}
+.spot .big-price{font-family:var(--serif);font-size:2rem;color:var(--gold2);margin:14px 0 22px}
+.spot ul{list-style:none;margin:0 0 8px}
+.spot ul li{padding:7px 0;border-bottom:1px solid #262626;color:#d8d2c2}
+.spot ul li::before{content:"◆";color:var(--gold);font-size:.65rem;margin-right:10px;vertical-align:2px}
+@media(max-width:860px){.spot{grid-template-columns:1fr}.spot .frame img{height:320px}}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.why-grid{grid-template-columns:1fr}}
+.why{background:#fff;border:1px solid #e6e0cd;border-top:3px solid var(--gold);border-radius:12px;padding:24px 22px}
+.why .ic{font-size:1.6rem;color:var(--gold);font-family:var(--serif)}
+.why h3{font-size:1.12rem;margin:8px 0 5px}
+.why p{color:#6f6a5c;font-size:.94rem}
+
+/* reviews */
+.rev-box{max-width:760px;margin:0 auto;text-align:center;min-height:190px}
+.stars{color:var(--gold2);font-size:1.25rem;letter-spacing:.3em}
+.rev-text{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.5rem);line-height:1.5;margin:16px 0 12px;color:#efe9d8}
+.rev-name{letter-spacing:.25em;text-transform:uppercase;font-size:.8rem;color:var(--gold-soft)}
+.rev-dots{display:flex;gap:9px;justify-content:center;margin-top:24px}
+.rev-dots button{width:11px;height:11px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0}
+.rev-dots button.on{background:var(--gold)}
+.rev-nav{display:flex;gap:10px;justify-content:center;margin-top:16px}
+.rev-nav button{background:none;border:1px solid #3a3a3a;color:#ddd;border-radius:999px;width:40px;height:40px;font-size:1rem}
+.rev-nav button:hover{border-color:var(--gold);color:var(--gold2)}
+
+/* eye test band */
+.eyetest{background:linear-gradient(120deg,#171204,#0a0a0a 55%);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);color:#fff;text-align:center}
+.eyetest h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:8px}
+.eyetest p{color:#cfc9ba;margin-bottom:24px}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+@media(max-width:860px){.services{grid-template-columns:repeat(2,1fr)}}
+.svc{padding:10px}
+.svc .ic{font-size:1.9rem;color:var(--gold);font-family:var(--serif)}
+.svc h3{font-size:1.05rem;margin:9px 0 4px;color:#fff}
+.svc p{color:#a49e8f;font-size:.9rem}
+
+/* newsletter */
+.news{background:var(--gold);color:#141000;text-align:center}
+.news h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.news p{margin:6px 0 22px;color:#4a3d08}
+.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto}
+.news input{flex:1;min-width:230px;border:1px solid #8a6d14;border-radius:999px;padding:13px 20px;font-family:var(--sans);font-size:.95rem;outline:none;background:#fffdf4}
+.news button{background:#000;color:var(--gold2);border:none;border-radius:999px;padding:13px 26px;font-weight:600;letter-spacing:.05em}
+.news .ok{margin-top:14px;font-weight:600;display:none}
+
+/* footer */
+footer{background:#060606;color:#b9b3a4;padding:56px 0 26px;border-top:1px solid var(--gold)}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;margin-bottom:36px}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr}}
+footer h4{font-family:var(--serif);color:#fff;font-size:1.05rem;margin-bottom:12px;letter-spacing:.06em}
+footer a{color:#b9b3a4}
+footer a:hover{color:var(--gold2)}
+footer li{list-style:none;padding:4px 0}
+.f-bottom{border-top:1px solid #222;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.85rem;color:#7d7767}
+
+/* ---------- Cart drawer ---------- */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.3s;z-index:80}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(420px,94vw);background:#fff;z-index:90;transform:translateX(105%);transition:.35s;display:flex;flex-direction:column;box-shadow:-16px 0 40px rgba(0,0,0,.3)}
+.drawer.open{transform:none}
+.drawer header{position:static;background:#0a0a0a;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none}
+.drawer header h3{color:var(--gold2);letter-spacing:.1em;font-size:1.15rem}
+.x{background:none;border:1px solid #444;color:#fff;border-radius:8px;width:36px;height:36px;font-size:1rem}
+.items{flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:14px}
+.it{display:flex;gap:12px;border:1px solid #eee5cb;border-radius:12px;padding:10px}
+.it img{width:66px;height:66px;object-fit:cover;border-radius:8px}
+.it .inf{flex:1}
+.it h4{font-family:var(--sans);font-weight:600;font-size:.95rem;line-height:1.3}
+.it .p{color:#8a6d14;font-weight:600;font-size:.92rem}
+.qty{display:inline-flex;align-items:center;gap:0;border:1px solid #ddd2ae;border-radius:999px;overflow:hidden;margin-top:6px}
+.qty button{width:28px;height:28px;border:none;background:#f7f2df;font-size:1rem}
+.qty b{min-width:30px;text-align:center;font-size:.9rem}
+.rm{background:none;border:none;color:#b03a2e;font-size:.8rem;margin-top:6px;padding:0;text-decoration:underline}
+.d-foot{border-top:1px solid #eee;padding:16px 20px;background:#fffdf6}
+.d-foot .row{display:flex;justify-content:space-between;font-size:1.05rem;margin-bottom:4px}
+.d-foot .row b{font-family:var(--serif);font-size:1.3rem}
+.d-foot .note{font-size:.82rem;color:#8a8474;margin-bottom:12px}
+.checkout{width:100%;background:linear-gradient(180deg,var(--gold2),var(--gold));border:none;border-radius:11px;padding:15px;font-size:1rem;font-weight:700;color:#000;letter-spacing:.04em}
+.checkout:disabled{opacity:.5;cursor:not-allowed}
+.cont{background:none;border:none;width:100%;padding:10px;color:#555;text-decoration:underline}
+.noitems{text-align:center;color:#8a8474;padding:36px 0}
+
+/* ---------- Modal ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;padding:20px 12px;overflow-y:auto}
+.modal.open{display:flex}
+.modal .bg{position:fixed;inset:0;background:rgba(0,0,0,.65)}
+.sheet{position:relative;background:#fff;border-radius:16px;max-width:520px;width:100%;padding:28px 26px;margin:auto;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.sheet h3{font-size:1.5rem;margin-bottom:4px}
+.sheet .sub{color:#77705f;font-size:.92rem;margin-bottom:18px}
+.f-field{margin-bottom:13px}
+.f-field label{display:block;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;color:#4c473c}
+.f-field input,.f-field textarea{width:100%;border:1px solid #d8d0b4;border-radius:10px;padding:12px 14px;font-family:var(--sans);font-size:.97rem;outline:none;background:#fffef9}
+.f-field input:focus,.f-field textarea:focus{border-color:var(--gold)}
+.f-field .hint{font-size:.78rem;color:#99917c;margin-top:3px}
+.f-field .err{border-color:#c0392b;background:#fdf1ef}
+.paybox{background:#0d0d0d;color:#e9e4d6;border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin:16px 0}
+.paybox b{color:var(--gold2);font-family:var(--serif)}
+.sum{background:#faf6ea;border:1px solid #eee2bd;border-radius:10px;padding:13px 16px;font-size:.92rem;margin-bottom:16px;max-height:150px;overflow-y:auto}
+.sum div{display:flex;justify-content:space-between;padding:2px 0}
+.sum .tot{border-top:1px dashed #cbbd87;margin-top:7px;padding-top:8px;font-weight:700;font-size:1rem}
+.place{width:100%;background:linear-gradient(180deg,var(--gold2),var(--gold));border:none;border-radius:11px;padding:15px;font-size:1rem;font-weight:700;color:#000}
+.wa-order{width:100%;background:#1faa55;border:none;border-radius:11px;padding:14px;font-size:.98rem;font-weight:700;color:#fff;margin-top:10px}
+.or{text-align:center;color:#99917c;font-size:.82rem;margin:12px 0 2px;letter-spacing:.2em}
+.cancel{display:block;margin:12px auto 0;background:none;border:none;color:#777;text-decoration:underline}
+.success{text-align:center;padding:14px 0 4px}
+.success .tick{width:74px;height:74px;border-radius:50%;background:#eafaf0;border:2px solid #22a95c;color:#1c8a49;font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.success h3{margin-bottom:8px}
+.success .oid{display:inline-block;background:#0d0d0d;color:var(--gold2);border-radius:8px;padding:8px 18px;font-family:var(--serif);letter-spacing:.12em;margin:10px 0 14px}
+.success p{color:#5c574b}
+.formerr{display:none;background:#fdf1ef;border:1px solid #e5b4ae;color:#8e2f24;border-radius:10px;padding:11px 14px;font-size:.9rem;margin-bottom:14px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,90px);background:#0d0d0d;color:#fff;border:1px solid var(--gold);border-radius:999px;padding:13px 24px;z-index:120;font-size:.95rem;transition:.35s;box-shadow:0 16px 34px rgba(0,0,0,.35);max-width:92vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+.toast b{color:var(--gold2)}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:70;width:56px;height:56px;border-radius:50%;background:#22a95c;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+
+<div class="offerbar">🔥 <b>Buy 1 Get 1 Free</b> — on selected frames &nbsp;·&nbsp; Offer ends in <span class="cd" id="countdown">--:--:--</span></div>
+
+<header>
+  <div class="wrap hbar">
+    <a class="logo" href="#top">ROYAL VISION<small>SEE THE ROYAL STYLE</small></a>
+    <nav class="main">
+      <a href="#top">Home</a><a href="#shop">Shop</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="mnav" id="mnav">
+    <a href="#top">Home</a><a href="#shop">Shop</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Royal Vision · Premium Eyewear</div>
+      <h1>Luxury Branded <em>Sunglasses</em></h1>
+      <p class="sub">Premium sunglasses &amp; branded frames — DITA, PRADA, MAYBACH, Cartier and more, at prices everyone can afford. Cash on Delivery, all over Pakistan.</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="#shop">Shop Now</a>
+        <a class="btn btn-line" href="https://wa.me/923074400002?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20sunglasses%20from%20Royal%20Vision." target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+      <div class="stats">
+        <div><b>38+</b><span>Designs</span></div>
+        <div><b>Rs 2,350</b><span>Starting Price</span></div>
+        <div><b>COD</b><span>Cash on Delivery</span></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="frame"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/05-prada-5000.jpg" alt="PRADA luxury sunglasses by Royal Vision"></div>
+      <div class="tag"><small>Product of the Week</small>PRADA — Rs 5,000</div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Find Your Style</div>
+      <h2>Shop by <span class="gold" style="color:#8a6d14">Category</span></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="cats">
+      <button class="cat" data-cat="all"><span class="ring"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/05-prada-5000.jpg" alt="Sunglasses"></span><h3>Sunglasses</h3><span>Full Collection</span></button>
+      <button class="cat" data-cat="all"><span class="ring"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/02-royal-vision-black-aviator-4000.jpg" alt="Aviator"></span><h3>Aviator</h3><span>Timeless Icons</span></button>
+      <button class="cat" data-cat="ladies"><span class="ring"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/31-marc-jacobs-ladies-2850.jpg" alt="Ladies collection"></span><h3>Ladies</h3><span>Elegant Picks</span></button>
+      <button class="cat" data-cat="all"><span class="ring"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/22-moscot-2500.jpg" alt="Classic frames"></span><h3>Classic</h3><span>Everyday Royalty</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" style="background:#fbf8f0;border-top:1px solid #ece4cd;border-bottom:1px solid #ece4cd">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Collection</div>
+      <h2>Our Sunglasses</h2>
+      <p>Prices from Rs 2,350 to Rs 5,000. Every photo shows its price. Add to cart, or order instantly on WhatsApp.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="controls">
+      <div class="chips" id="chips">
+        <button class="chip on" data-filter="all">All</button>
+        <button class="chip" data-filter="ladies">Ladies</button>
+        <button class="chip" data-filter="premium">Premium Rs 4,000+</button>
+        <button class="chip" data-filter="under3000">Under Rs 3,000</button>
+      </div>
+      <div class="search-sort">
+        <input type="search" id="search" placeholder="🔍 Search brand…" aria-label="Search products">
+        <select id="sort" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="low">Price: Low → High</option>
+          <option value="high">Price: High → Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- SPOTLIGHT -->
+<section class="dark">
+  <div class="wrap spot">
+    <div class="frame"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/05-prada-5000.jpg" alt="PRADA — Product of the Week"></div>
+    <div>
+      <div class="eyebrow">Product of the Week</div>
+      <h2>PRADA — The Royal Pick</h2>
+      <p style="color:#cfc9ba">Our most wanted frame this week. Bold Italian styling, dark UV lenses and the finish that turns every head — straight from the Royal Vision showcase.</p>
+      <ul>
+        <li>UV Protection lenses</li>
+        <li>Lightweight, all-day comfort</li>
+        <li>Premium quality frame &amp; hinges</li>
+        <li>Stylish look — day or night</li>
+      </ul>
+      <div class="big-price">Rs 5,000</div>
+      <div class="btns" style="margin:0">
+        <button class="btn btn-gold" data-add="5">Add to Cart</button>
+        <a class="btn btn-line" href="https://wa.me/923074400002?text=I%20want%20to%20order%3A%20PRADA%20(Rs%205%2C000)" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Royal Promise</div>
+      <h2>Why Royal Vision</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why"><div class="ic">☀</div><h3>UV Protection</h3><p>Dark, protective lenses that shield your eyes from harsh sunlight — style with real safety.</p></div>
+      <div class="why"><div class="ic">✦</div><h3>Lightweight Design</h3><p>Feather-light frames you can wear all day without marks or pressure on the nose.</p></div>
+      <div class="why"><div class="ic">♛</div><h3>Premium Quality</h3><p>Original branded frames with strong hinges and a luxury finish — checked before dispatch.</p></div>
+      <div class="why"><div class="ic">♦</div><h3>Stylish Look</h3><p>The latest international designs — DITA, MAYBACH, Cartier, Louis Vuitton and more.</p></div>
+      <div class="why"><div class="ic">₨</div><h3>Cash on Delivery</h3><p>Pay only when your parcel reaches your door. No advance payment, no risk.</p></div>
+      <div class="why"><div class="ic">✆</div><h3>WhatsApp Ordering</h3><p>Order in minutes on WhatsApp: 0307 4400002. We confirm every order with a personal call.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="dark" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Customer Love</div>
+      <h2>What People Say</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="rev-box">
+      <div class="stars" id="revStars">★★★★★</div>
+      <p class="rev-text" id="revText"></p>
+      <div class="rev-name" id="revName"></div>
+      <div class="rev-dots" id="revDots"></div>
+      <div class="rev-nav">
+        <button id="revPrev" aria-label="Previous review">‹</button>
+        <button id="revNext" aria-label="Next review">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EYE TEST -->
+<section class="eyetest">
+  <div class="wrap">
+    <div class="eyebrow">Free Eye Test</div>
+    <h2>Get Your Eyes Tested — Free</h2>
+    <p>Book your free eye test and get fitted by experts. Message us on WhatsApp to book your slot.</p>
+    <a class="btn btn-gold" href="https://wa.me/923074400002?text=Assalam-o-Alaikum!%20I%20want%20to%20book%20a%20FREE%20eye%20test%20at%20Royal%20Vision." target="_blank" rel="noopener">Book on WhatsApp</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="dark" style="padding:52px 0">
+  <div class="wrap services">
+    <div class="svc"><div class="ic">✆</div><h3>WhatsApp Ordering</h3><p>Message us and order in minutes — 0307 4400002.</p></div>
+    <div class="svc"><div class="ic">♛</div><h3>Buy 1 Get 1 Free</h3><p>On selected frames — ask for today's list.</p></div>
+    <div class="svc"><div class="ic">☀</div><h3>Free Eye Test</h3><p>Book your free eye test on WhatsApp.</p></div>
+    <div class="svc"><div class="ic">₨</div><h3>Best Prices</h3><p>Original branded frames from Rs 2,350.</p></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="wrap">
+    <h2>Join the Royal List</h2>
+    <p>New arrivals, secret offers and Buy 1 Get 1 alerts — straight to your inbox.</p>
+    <form id="newsForm">
+      <input type="email" id="newsEmail" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="ok" id="newsOk">✓ Shukriya! You are on the Royal List.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="logo" href="#top">ROYAL VISION<small>SEE THE ROYAL STYLE</small></a>
+        <p style="margin-top:14px;max-width:340px">Premium sunglasses &amp; branded frames at honest prices. Order online, on WhatsApp, or pay Cash on Delivery anywhere in Pakistan.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#why">Why Royal Vision</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#top">Back to Top</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>WhatsApp / Call: <a href="https://wa.me/923074400002" target="_blank" rel="noopener">0307 4400002</a></li>
+          <li>Facebook: <a href="https://www.facebook.com/RoyalVisionEyewear1" target="_blank" rel="noopener">Royal Vision Eyewear</a></li>
+          <li>Website: royalvisionoptics.com</li>
+          <li>Payment: Cash on Delivery</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Royal Vision. All rights reserved.</span>
+      <span>See the Royal Style 👑</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/923074400002?text=Assalam-o-Alaikum!%20I%20have%20a%20question%20about%20Royal%20Vision%20sunglasses." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="29" height="29" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.8-.76.97-.14.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.74-.2-.42-.4-.37-.53-.37h-.46c-.16 0-.41.06-.62.25-.22.18-.82.8-.82 2.01 0 1.21.85 2.37.97 2.53.12.17 1.68 2.56 4.07 3.59.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.46-.07 1.47-.6 1.79-1.22.32-.62.32-1.15.22-1.26-.1-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <header>
+    <h3>YOUR CART 🛒</h3>
+    <button class="x" id="closeCart" aria-label="Close cart">✕</button>
+  </header>
+  <div class="items" id="cartItems"></div>
+  <div class="d-foot">
+    <div class="row"><span>Subtotal</span><b id="cartTotal">Rs 0</b></div>
+    <div class="note">Delivery charges confirmed on call. Payment: Cash on Delivery.</div>
+    <button class="checkout" id="checkoutBtn">Checkout →</button>
+    <button class="cont" id="contBtn">Continue shopping</button>
+  </div>
+</aside>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="bg" id="modalBg"></div>
+  <div class="sheet">
+    <div id="checkoutView">
+      <h3>Checkout</h3>
+      <p class="sub">Fill your details — we will call you to confirm your order. Payment is Cash on Delivery.</p>
+      <div class="formerr" id="formErr"></div>
+      <div class="sum" id="orderSummary"></div>
+      <form id="orderForm" novalidate>
+        <div class="f-field"><label for="fName">Your Name *</label><input id="fName" type="text" placeholder="e.g. Muhammad Ahmed" autocomplete="name"></div>
+        <div class="f-field"><label for="fPhone">Mobile Number *</label><input id="fPhone" type="tel" placeholder="03XX XXXXXXX" autocomplete="tel"><div class="hint">Pakistani mobile — we will call this number to confirm.</div></div>
+        <div class="f-field"><label for="fAddress">Complete Address *</label><textarea id="fAddress" rows="2" placeholder="House, street, area, landmark"></textarea></div>
+        <div class="f-field"><label for="fCity">City *</label><input id="fCity" type="text" placeholder="e.g. Mardan"></div>
+        <div class="f-field"><label for="fNote">Note (optional)</label><textarea id="fNote" rows="2" placeholder="Anything we should know?"></textarea></div>
+        <div class="paybox"><span>Payment Method</span><b>Cash on Delivery</b></div>
+        <button type="submit" class="place" id="placeBtn">Place Order</button>
+        <div class="or">— OR —</div>
+        <button type="button" class="wa-order" id="waOrderBtn">Order via WhatsApp</button>
+        <button type="button" class="cancel" id="cancelCheckout">Cancel</button>
+      </form>
+    </div>
+    <div id="successView" style="display:none">
+      <div class="success">
+        <div class="tick">✓</div>
+        <h3>Order Placed!</h3>
+        <div class="oid" id="orderIdBox">RV-000000</div>
+        <p><b>Thank you! We will call you to confirm your order.</b></p>
+        <p style="margin-top:8px">Payment is Cash on Delivery — pay when your parcel arrives.</p>
+        <button class="place" id="successClose" style="margin-top:20px">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const IMG = "https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/";
+const WA_NUM = "923074400002";
+const PRODUCTS = [
+ {id:1, name:"Royal Vision Gold", price:4500, img:"01-royal-vision-gold-4500.jpg"},
+ {id:2, name:"Royal Vision Black Aviator", price:4000, img:"02-royal-vision-black-aviator-4000.jpg"},
+ {id:3, name:"MAYBACH", price:4500, img:"03-maybach-4500.jpg"},
+ {id:4, name:"Cartier", price:4500, img:"04-cartier-4500.jpg"},
+ {id:5, name:"PRADA", price:5000, img:"05-prada-5000.jpg"},
+ {id:6, name:"Cartier", price:3500, img:"06-cartier-3500.jpg"},
+ {id:7, name:"DITA", price:4500, img:"07-dita-4500.jpg"},
+ {id:8, name:"Cartier Gold", price:3500, img:"08-cartier-gold-3500.jpg"},
+ {id:9, name:"Cartier Square", price:4500, img:"09-cartier-square-4500.jpg"},
+ {id:10, name:"MAYBACH (Design 2)", price:4500, img:"10-maybach-4500-b.jpg"},
+ {id:11, name:"Shopard", price:3500, img:"11-shopard-3500.jpg"},
+ {id:12, name:"Cartier Black", price:3500, img:"12-cartier-black-3500.jpg"},
+ {id:13, name:"Cartier Tortoise", price:3500, img:"13-cartier-tortoise-3500.jpg"},
+ {id:14, name:"PRADA", price:3500, img:"14-prada-3500.jpg"},
+ {id:15, name:"Ray-Ban", price:3000, img:"15-rayban-3000.jpg"},
+ {id:16, name:"Shopard", price:4500, img:"16-shopard-4500.jpg"},
+ {id:17, name:"Cartier Gold Black", price:3500, img:"17-cartier-goldblack-3500.jpg"},
+ {id:18, name:"Celine", price:2500, img:"18-celine-2500.jpg", tag:"ladies"},
+ {id:19, name:"Celine (with tag)", price:2500, img:"19-celine-tag-2500.jpg", tag:"ladies"},
+ {id:20, name:"Louis Vuitton", price:3000, img:"20-louis-vuitton-3000.jpg"},
+ {id:21, name:"Louis Vuitton Clear", price:3000, img:"21-louis-vuitton-clear-3000.jpg"},
+ {id:22, name:"MOSCOT", price:2500, img:"22-moscot-2500.jpg"},
+ {id:23, name:"Louis Vuitton Brown", price:3500, img:"23-louis-vuitton-brown-3500.jpg"},
+ {id:24, name:"DITA", price:2799, img:"24-dita-2799.jpg"},
+ {id:25, name:"Louis Vuitton Clear Green", price:3250, img:"25-louis-vuitton-clear-green-3250.jpg"},
+ {id:26, name:"MOSCOT Black", price:2500, img:"26-moscot-black-2500.jpg"},
+ {id:27, name:"Marc Jacobs", price:2399, img:"27-marc-jacobs-2399.jpg"},
+ {id:28, name:"DITA", price:2650, img:"28-dita-2650.jpg"},
+ {id:29, name:"DITA Lifestyle", price:2650, img:"29-dita-lifestyle-2650.jpg"},
+ {id:30, name:"DITA Lifestyle (Design 2)", price:2650, img:"30-dita-lifestyle-2650-b.jpg"},
+ {id:31, name:"Marc Jacobs Ladies", price:2850, img:"31-marc-jacobs-ladies-2850.jpg", tag:"ladies"},
+ {id:32, name:"John Dalia", price:2750, img:"32-john-dalia-2750.jpg"},
+ {id:33, name:"Louis Vuitton", price:3450, img:"33-louis-vuitton-3450.jpg"},
+ {id:34, name:"DITA Ladies", price:2850, img:"34-dita-ladies-2850.jpg", tag:"ladies"},
+ {id:35, name:"JMM", price:2350, img:"35-jmm-2350.jpg"},
+ {id:36, name:"Jhon Dalia", price:2700, img:"36-jhon-dalia-2700.jpg"},
+ {id:37, name:"MOSCOT Ladies", price:2950, img:"37-moscot-ladies-2950.jpg", tag:"ladies"},
+ {id:38, name:"MOSCOT Men", price:2750, img:"38-moscot-men-2750.jpg"}
+];
+const fmt = n => "Rs " + n.toLocaleString("en-PK");
+const byId = id => PRODUCTS.find(p => p.id === id);
+const waSvg = '<svg width="19" height="19" viewBox="0 0 24 24" fill="#1c8a49"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 16.87c-.25-.12-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.8-.76.97-.14.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.74-.2-.42-.4-.37-.53-.37h-.46c-.16 0-.41.06-.62.25-.22.18-.82.8-.82 2.01 0 1.21.85 2.37.97 2.53.12.17 1.68 2.56 4.07 3.59.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.46-.07 1.47-.6 1.79-1.22.32-.62.32-1.15.22-1.26-.1-.1-.23-.16-.48-.28z"/></svg>';
+
+/* ---------- Marquee ---------- */
+(function(){
+  const brands = "DITA ✦ PRADA ✦ MAYBACH ✦ CARTIER ✦ LOUIS VUITTON ✦ MOSCOT ✦ RAY-BAN ✦ MARC JACOBS ✦ CELINE ✦ JMM ✦ JOHN DALIA ✦ SHOPARD ✦ ";
+  document.getElementById("marqueeTrack").innerHTML = "<span>"+brands+"</span><span>"+brands+"</span>";
+})();
+
+/* ---------- Countdown to midnight ---------- */
+(function(){
+  const el = document.getElementById("countdown");
+  function tick(){
+    const now = new Date(); const end = new Date(now); end.setHours(24,0,0,0);
+    let s = Math.max(0, Math.floor((end - now)/1000));
+    const h = String(Math.floor(s/3600)).padStart(2,"0"), m = String(Math.floor(s%3600/60)).padStart(2,"0"), ss = String(s%60).padStart(2,"0");
+    el.textContent = h+":"+m+":"+ss;
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ---------- Shop grid / filters ---------- */
+let curFilter = "all", curSearch = "", curSort = "featured";
+const grid = document.getElementById("grid");
+function passes(p){
+  if(curFilter === "ladies" && p.tag !== "ladies") return false;
+  if(curFilter === "premium" && p.price < 4000) return false;
+  if(curFilter === "under3000" && p.price >= 3000) return false;
+  if(curSearch && !p.name.toLowerCase().includes(curSearch)) return false;
+  return true;
+}
+function renderGrid(){
+  let list = PRODUCTS.filter(passes);
+  if(curSort === "low") list = [...list].sort((a,b)=>a.price-b.price);
+  if(curSort === "high") list = [...list].sort((a,b)=>b.price-a.price);
+  if(!list.length){ grid.innerHTML = '<div class="empty">No products match your search. Try another brand or filter.</div>'; return; }
+  grid.innerHTML = list.map(p => `
+    <article class="card">
+      <div class="ph"><img loading="lazy" src="${IMG}${p.img}" alt="${p.name} — ${fmt(p.price)}"></div>
+      <div class="bd">
+        <h3>${p.name}</h3>
+        <div class="price">${fmt(p.price)} <small>COD AVAILABLE</small></div>
+        <div class="acts">
+          <button class="add" data-add="${p.id}">Add to Cart</button>
+          <a class="wa-ic" target="_blank" rel="noopener" aria-label="Order ${p.name} on WhatsApp"
+             href="https://wa.me/${WA_NUM}?text=${encodeURIComponent("I want to order: " + p.name + " (" + fmt(p.price) + ")")}">${waSvg}</a>
+        </div>
+      </div>
+    </article>`).join("");
+}
+document.getElementById("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === b));
+  curFilter = b.dataset.filter; renderGrid();
+});
+document.getElementById("search").addEventListener("input", e => { curSearch = e.target.value.trim().toLowerCase(); renderGrid(); });
+document.getElementById("sort").addEventListener("change", e => { curSort = e.target.value; renderGrid(); });
+document.querySelectorAll(".cat").forEach(c => c.addEventListener("click", () => {
+  const f = c.dataset.cat;
+  document.querySelectorAll(".chip").forEach(ch => ch.classList.toggle("on", ch.dataset.filter === f));
+  curFilter = f; renderGrid();
+  document.getElementById("shop").scrollIntoView({behavior:"smooth"});
+}));
+renderGrid();
+
+/* ---------- Cart ---------- */
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem("rv_cart") || "{}") || {}; } catch(e){ cart = {}; }
+Object.keys(cart).forEach(k => { if(!byId(+k)) delete cart[k]; });
+const drawer = document.getElementById("drawer"), overlay = document.getElementById("overlay");
+function saveCart(){ localStorage.setItem("rv_cart", JSON.stringify(cart)); }
+function cartCount(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
+function cartTotal(){ return Object.entries(cart).reduce((a,[id,q])=>a + byId(+id).price*q, 0); }
+function renderCart(){
+  document.getElementById("cartCount").textContent = cartCount();
+  const box = document.getElementById("cartItems");
+  const entries = Object.entries(cart);
+  if(!entries.length){
+    box.innerHTML = '<div class="noitems">Your cart is empty.<br>Add something royal 👑</div>';
+  } else {
+    box.innerHTML = entries.map(([id,q]) => { const p = byId(+id); return `
+      <div class="it">
+        <img src="${IMG}${p.img}" alt="${p.name}">
+        <div class="inf">
+          <h4>${p.name}</h4>
+          <div class="p">${fmt(p.price)} × ${q} = ${fmt(p.price*q)}</div>
+          <span class="qty">
+            <button data-dec="${p.id}" aria-label="Decrease">−</button><b>${q}</b><button data-inc="${p.id}" aria-label="Increase">+</button>
+          </span><br>
+          <button class="rm" data-rm="${p.id}">Remove</button>
+        </div>
+      </div>`; }).join("");
+  }
+  document.getElementById("cartTotal").textContent = fmt(cartTotal());
+  document.getElementById("checkoutBtn").disabled = !entries.length;
+}
+function openCart(){ renderCart(); drawer.classList.add("open"); overlay.classList.add("show"); }
+function closeCart(){ drawer.classList.remove("open"); overlay.classList.remove("show"); }
+document.getElementById("openCart").addEventListener("click", openCart);
+document.getElementById("closeCart").addEventListener("click", closeCart);
+document.getElementById("contBtn").addEventListener("click", closeCart);
+overlay.addEventListener("click", closeCart);
+document.getElementById("cartItems").addEventListener("click", e => {
+  const inc = e.target.closest("[data-inc]"), dec = e.target.closest("[data-dec]"), rm = e.target.closest("[data-rm]");
+  if(inc){ cart[inc.dataset.inc]++; }
+  else if(dec){ const id = dec.dataset.dec; cart[id]--; if(cart[id] <= 0) delete cart[id]; }
+  else if(rm){ delete cart[rm.dataset.rm]; }
+  else return;
+  saveCart(); renderCart();
+});
+function addToCart(id){
+  cart[id] = (cart[id] || 0) + 1;
+  saveCart(); renderCart();
+  toast("Added to cart: <b>" + byId(id).name + "</b> — " + fmt(byId(id).price));
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-add]"); if(b) addToCart(+b.dataset.add);
+});
+
+/* ---------- Toast ---------- */
+let toastTimer;
+function toast(html){
+  const t = document.getElementById("toast");
+  t.innerHTML = html; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove("show"), 2600);
+}
+
+/* ---------- Reviews slider ---------- */
+const REVIEWS = [
+ {stars:5, text:"“Ordered the DITA frame — quality is genuinely premium, and it arrived exactly like the photo. The confirmation call made everything easy.”", name:"Ahmed · Lahore"},
+ {stars:5, text:"“The ladies Celine is so light and stylish, I wear it all day. Cash on Delivery means zero tension. Highly recommended!”", name:"Fatima · Karachi"},
+ {stars:4, text:"“Bought the MOSCOT Men for daily use. Honest price, solid frame, fast reply on WhatsApp. Royal Vision is my go-to now.”", name:"Usman · Mardan"}
+];
+let revIdx = 0, revTimer;
+function showReview(i){
+  revIdx = (i + REVIEWS.length) % REVIEWS.length;
+  const r = REVIEWS[revIdx];
+  document.getElementById("revStars").textContent = "★".repeat(r.stars) + "☆".repeat(5 - r.stars);
+  document.getElementById("revText").textContent = r.text;
+  document.getElementById("revName").textContent = "— " + r.name;
+  document.querySelectorAll("#revDots button").forEach((d,j)=>d.classList.toggle("on", j === revIdx));
+}
+const dotsBox = document.getElementById("revDots");
+REVIEWS.forEach((_,i)=>{ const b = document.createElement("button"); b.setAttribute("aria-label","Review " + (i+1)); b.addEventListener("click", ()=>{ showReview(i); resetRevTimer(); }); dotsBox.appendChild(b); });
+function resetRevTimer(){ clearInterval(revTimer); revTimer = setInterval(()=>showReview(revIdx+1), 6000); }
+document.getElementById("revPrev").addEventListener("click", ()=>{ showReview(revIdx-1); resetRevTimer(); });
+document.getElementById("revNext").addEventListener("click", ()=>{ showReview(revIdx+1); resetRevTimer(); });
+showReview(0); resetRevTimer();
+
+/* ---------- Newsletter ---------- */
+document.getElementById("newsForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const em = document.getElementById("newsEmail").value.trim();
+  if(!em) return;
+  let list = []; try { list = JSON.parse(localStorage.getItem("rv_news") || "[]"); } catch(_){}
+  if(!list.includes(em)) list.push(em);
+  localStorage.setItem("rv_news", JSON.stringify(list));
+  document.getElementById("newsOk").style.display = "block";
+  document.getElementById("newsEmail").value = "";
+  toast("Subscribed: <b>" + em + "</b>");
+});
+
+/* ---------- Mobile nav ---------- */
+document.getElementById("burger").addEventListener("click", ()=>document.getElementById("mnav").classList.toggle("open"));
+document.querySelectorAll("#mnav a").forEach(a=>a.addEventListener("click", ()=>document.getElementById("mnav").classList.remove("open")));
+
+/* ---------- Checkout ---------- */
+const modal = document.getElementById("modal");
+function itemsText(){
+  return Object.entries(cart).map(([id,q]) => { const p = byId(+id); return p.name + " x" + q + " — " + fmt(p.price*q); }).join("\n");
+}
+function renderSummary(){
+  const rows = Object.entries(cart).map(([id,q]) => { const p = byId(+id); return `<div><span>${p.name} × ${q}</span><span>${fmt(p.price*q)}</span></div>`; }).join("");
+  document.getElementById("orderSummary").innerHTML = rows + `<div class="tot"><span>Total (COD)</span><span>${fmt(cartTotal())}</span></div>`;
+}
+function openCheckout(){
+  if(!Object.keys(cart).length) return;
+  closeCart();
+  document.getElementById("checkoutView").style.display = "block";
+  document.getElementById("successView").style.display = "none";
+  document.getElementById("formErr").style.display = "none";
+  renderSummary();
+  modal.classList.add("open");
+}
+function closeCheckout(){ modal.classList.remove("open"); }
+document.getElementById("checkoutBtn").addEventListener("click", openCheckout);
+document.getElementById("modalBg").addEventListener("click", closeCheckout);
+document.getElementById("cancelCheckout").addEventListener("click", closeCheckout);
+document.getElementById("successClose").addEventListener("click", closeCheckout);
+document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeCheckout(); closeCart(); } });
+
+function getForm(){
+  return {
+    name: document.getElementById("fName").value.trim(),
+    phone: document.getElementById("fPhone").value.trim(),
+    address: document.getElementById("fAddress").value.trim(),
+    city: document.getElementById("fCity").value.trim(),
+    note: document.getElementById("fNote").value.trim()
+  };
+}
+function validate(f){
+  const bad = [];
+  const mark = (id, isBad) => document.getElementById(id).classList.toggle("err", isBad);
+  mark("fName", !f.name); if(!f.name) bad.push("your name");
+  const phoneOk = /^(\+92|0)?3\d{9}$/.test(f.phone.replace(/[\s-]/g,""));
+  mark("fPhone", !phoneOk); if(!phoneOk) bad.push("a valid mobile number (e.g. 0307 4400002)");
+  mark("fAddress", !f.address); if(!f.address) bad.push("your complete address");
+  mark("fCity", !f.city); if(!f.city) bad.push("your city");
+  return bad;
+}
+function showErr(msg){
+  const e = document.getElementById("formErr");
+  e.innerHTML = msg; e.style.display = "block";
+  e.scrollIntoView({behavior:"smooth", block:"center"});
+}
+function orderText(f, oid){
+  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
+}
+document.getElementById("orderForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = getForm();
+  const bad = validate(f);
+  if(bad.length){ showErr("Please add " + bad.join(", ") + " so we can deliver your order."); return; }
+  const btn = document.getElementById("placeBtn");
+  btn.disabled = true; btn.textContent = "Placing order…";
+  const oid = "RV-" + Date.now().toString().slice(-8);
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/fk402273@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "New Order — Royal Vision",
+        _template: "table",
+        order_id: oid,
+        name: f.name,
+        phone: f.phone,
+        address: f.address,
+        city: f.city,
+        note: f.note || "—",
+        items: itemsText(),
+        total: fmt(cartTotal()),
+        payment: "Cash on Delivery"
+      })
+    });
+    if(!res.ok) throw new Error("Email service error");
+    document.getElementById("orderIdBox").textContent = oid;
+    document.getElementById("checkoutView").style.display = "none";
+    document.getElementById("successView").style.display = "block";
+    cart = {}; saveCart(); renderCart();
+  } catch(err) {
+    showErr("⚠️ The email order could not be sent right now. Please use <b>“Order via WhatsApp”</b> below — your items and details will be sent there instead, and we will confirm on call.");
+    document.getElementById("waOrderBtn").focus();
+  } finally {
+    btn.disabled = false; btn.textContent = "Place Order";
+  }
+});
+document.getElementById("waOrderBtn").addEventListener("click", () => {
+  const f = getForm();
+  const bad = validate(f);
+  if(bad.length){ showErr("Please add " + bad.join(", ") + " — then tap Order via WhatsApp."); return; }
+  window.open("https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(orderText(f, null)), "_blank");
+});
+
+renderCart();
+</script>
+</body>
+</html>
