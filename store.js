@@ -39,8 +39,40 @@ const PRODUCTS = [
  {id:35, name:"JMM", price:2350, img:"35-jmm-2350.jpg", cat:"classic"},
  {id:36, name:"Jhon Dalia", price:2700, img:"36-jhon-dalia-2700.jpg", cat:"sunglasses"},
  {id:37, name:"MOSCOT Ladies", price:2950, img:"37-moscot-ladies-2950.jpg", tag:"ladies", cat:"ladies"},
- {id:38, name:"MOSCOT Men", price:2750, img:"38-moscot-men-2750.jpg", cat:"classic"}
+ {id:38, name:"MOSCOT Men", price:2750, img:"38-moscot-men-2750.jpg", cat:"classic"},
+ {id:39, name:"Ray-Ban Acetate Brown", price:3000, img:"images/39-rayban-acetate-brown-3000.jpg", cat:"classic"},
+ {id:40, name:"GUCCI Acetate Blue", price:3250, img:"images/40-gucci-acetate-blue-3250.jpg", cat:"ladies", tag:"ladies"},
+ {id:41, name:"PORSCHE Grey Matte", price:2750, img:"images/41-porsche-grey-matte-2750.jpg", cat:"ladies", tag:"ladies"},
+ {id:42, name:"POLICE Acetate Brown", price:2750, img:"images/42-police-acetate-brown-2750.jpg", cat:"classic"},
+ {id:43, name:"POLICE Black Grey Gradient", price:2750, img:"images/43-police-black-grey-gradient-2750.jpg", cat:"classic"},
+ {id:44, name:"POLICE Acetate Black", price:2750, img:"images/44-police-acetate-black-2750.jpg", cat:"ladies", tag:"ladies"},
+ {id:45, name:"GUCCI Acetate Brown", price:2900, img:"images/45-gucci-acetate-brown-2900.jpg", cat:"ladies", tag:"ladies"},
+ {id:46, name:"PRADA Acetate Black", price:2850, img:"images/46-prada-acetate-black-2850.jpg", cat:"classic"},
+ {id:47, name:"PORSCHE Matte Black", price:2750, img:"images/47-porsche-matte-black-2750.jpg", cat:"classic"},
+ {id:48, name:"POLICE Black Brown", price:2850, img:"images/48-police-black-brown-2850.jpg", cat:"classic"}
+,
+ {id:49, name:"BOSS Black Grey Gradient", price:2850, img:"images/49-boss-black-grey-gradient-2850.jpg", cat:"classic"},
+ {id:50, name:"CHANEL Transparent", price:2750, img:"images/50-chanel-transparent-2750.jpg", cat:"classic"},
+ {id:51, name:"POLICE Grey Transparent", price:2750, img:"images/51-police-grey-transparent-2750.jpg", cat:"classic"},
+ {id:52, name:"POLICE TR-90 Black", price:2750, img:"images/52-police-tr90-black-2750.jpg", cat:"classic"},
+ {id:53, name:"Ray-Ban TR-90 Teal", price:2950, img:"images/53-rayban-tr90-teal-2950.jpg", cat:"classic"},
+ {id:54, name:"DITA Round Black", price:2650, img:"images/54-dita-round-black-2650.jpg", cat:"classic"},
+ {id:55, name:"DITA Round White", price:2850, img:"images/55-dita-round-white-ladies-2850.jpg", cat:"ladies", tag:"ladies"},
+ {id:56, name:"GUCCI Clear", price:2750, img:"images/56-gucci-clear-2750.jpg", cat:"classic"},
+ {id:57, name:"POLICE Green", price:2950, img:"images/57-police-green-ladies-2950.jpg", cat:"ladies", tag:"ladies"},
+ {id:58, name:"PRADA Gold Black", price:2950, img:"images/58-prada-gold-black-2950.jpg", cat:"classic"}
+,
+ {id:59, name:"GUCCI Teal Gradient", price:3250, img:"images/59-gucci-teal-gradient-ladies-3250.jpg", cat:"ladies", tag:"ladies"},
+ {id:60, name:"POLICE Clear", price:2950, img:"images/60-police-clear-ladies-2950.jpg", cat:"ladies", tag:"ladies"},
+ {id:61, name:"Ray-Ban Yellow", price:2850, img:"images/61-rayban-yellow-2850.jpg", cat:"classic"},
+ {id:62, name:"DITA Grey", price:2950, img:"images/62-dita-grey-ladies-2950.jpg", cat:"ladies", tag:"ladies"},
+ {id:63, name:"GUCCI Purple", price:2850, img:"images/63-gucci-purple-ladies-2850.jpg", cat:"ladies", tag:"ladies"},
+ {id:64, name:"Ray-Ban Navy Aviator", price:2750, img:"images/64-rayban-navy-aviator-2750.jpg", cat:"classic"},
+ {id:65, name:"Ray-Ban Clear White", price:2650, img:"images/65-rayban-clear-white-2650.jpg", cat:"classic"},
+ {id:66, name:"Ray-Ban Navy", price:2850, img:"images/66-rayban-navy-2850.jpg", cat:"classic"}
+
 ];
+const imgSrc = p => p.img.includes("/") ? p.img : IMG + p.img;
 const fmt = n => "Rs " + n.toLocaleString("en-PK");
 const byId = id => PRODUCTS.find(p => p.id === id);
 const waSvg = '<svg width="19" height="19" viewBox="0 0 24 24" fill="#1c8a49"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 16.87c-.25-.12-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.8-.76.97-.14.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.74-.2-.42-.4-.37-.53-.37h-.46c-.16 0-.41.06-.62.25-.22.18-.82.8-.82 2.01 0 1.21.85 2.37.97 2.53.12.17 1.68 2.56 4.07 3.59.57.25 1.01.39 1.36.5.57.18 1.09.16 1.5.1.46-.07 1.47-.6 1.79-1.22.32-.62.32-1.15.22-1.26-.1-.1-.23-.16-.48-.28z"/></svg>';
@@ -84,7 +116,7 @@ function renderGrid(){
   if(!list.length){ grid.innerHTML = '<div class="empty">No products match your search. Try another brand or filter.</div>'; return; }
   grid.innerHTML = list.map(p => `
     <article class="card">
-      <div class="ph"><img loading="lazy" src="${IMG}${p.img}" alt="${p.name} — ${fmt(p.price)}"></div>
+      <div class="ph"><img loading="lazy" src="${imgSrc(p)}" alt="${p.name} — ${fmt(p.price)}"></div>
       <div class="bd">
         <h3>${p.name}</h3>
         <div class="price">${fmt(p.price)} <small>COD AVAILABLE</small></div>
@@ -115,7 +147,7 @@ const fg = document.getElementById("featuredGrid");
 if (fg) {
   fg.innerHTML = PRODUCTS.slice(0, 8).map(p => `
     <article class="card">
-      <div class="ph"><img loading="lazy" src="${IMG}${p.img}" alt="${p.name} — ${fmt(p.price)}"></div>
+      <div class="ph"><img loading="lazy" src="${imgSrc(p)}" alt="${p.name} — ${fmt(p.price)}"></div>
       <div class="bd">
         <h3>${p.name}</h3>
         <div class="price">${fmt(p.price)} <small>COD AVAILABLE</small></div>
@@ -145,7 +177,7 @@ function renderCart(){
   } else {
     box.innerHTML = entries.map(([id,q]) => { const p = byId(+id); return `
       <div class="it">
-        <img src="${IMG}${p.img}" alt="${p.name}">
+        <img src="${imgSrc(p)}" alt="${p.name}">
         <div class="inf">
           <h4>${p.name}</h4>
           <div class="p">${fmt(p.price)} × ${q} = ${fmt(p.price*q)}</div>
@@ -281,7 +313,7 @@ function showErr(msg){
   e.scrollIntoView({behavior:"smooth", block:"center"});
 }
 function orderText(f, oid){
-  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nProduct Pictures:\n" + Object.entries(cart).map(([id,q]) => IMG + byId(+id).img).join("\n") + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
+  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nProduct Pictures:\n" + Object.entries(cart).map(([id,q]) => imgSrc(byId(+id))).join("\n") + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
 }
 document.getElementById("orderForm").addEventListener("submit", async e => {
   e.preventDefault();
@@ -304,7 +336,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
         address: f.address,
         city: f.city,
         note: f.note || "—",
-        pictures: Object.entries(cart).map(([id,q]) => { const p = byId(+id); return p.name + ": " + IMG + p.img; }).join("\n"),
+        pictures: Object.entries(cart).map(([id,q]) => { const p = byId(+id); return p.name + ": " + imgSrc(p); }).join("\n"),
         items: itemsText(),
         total: fmt(cartTotal()),
         payment: "Cash on Delivery"
