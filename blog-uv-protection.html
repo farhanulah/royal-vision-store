@@ -15,13 +15,13 @@
 <header>
   <div class="wrap hbar">
     <a class="logo" href="index.html"><img class="logoimg" src="images/logo.jpg" alt="Royal Vision logo"><span>ROYAL VISION<small>SEE THE ROYAL STYLE</small></span></a>
-    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
     <div style="display:flex;gap:10px;align-items:center">
       <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
-  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 </header>
 <div class="pagehero"><div class="crumb">Blog · Eye Health</div><h1>Why UV Protection Matters for Your Eyes</h1><p>Sunglasses are not just a style statement — they are sunscreen for your eyes.</p></div>
 <article class="article"><div class="heroimg"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/29-dita-lifestyle-2650.jpg" alt="Why UV Protection Matters for Your Eyes"></div><h2>What UV rays do to your eyes</h2><p>The sun sends two types of ultraviolet rays to your eyes: UVA and UVB. Short-term overexposure can cause a painful condition like sunburn of the eye, while years of unprotected exposure raise the risk of cataracts and other eye problems. In Pakistan's bright summers — especially in open areas and while driving — your eyes take in far more UV than you realise.</p><h2>Dark lenses are not enough</h2><p>A common mistake is assuming that the darker the lens, the better the protection. In reality, lens colour and darkness have little to do with UV blocking. A cheap dark lens without UV coating can even be worse than no sunglasses, because your pupils open wider behind it and let in more harmful rays. Always look for lenses described as UV400 or 100% UV protection.</p><h2>How to choose protective sunglasses</h2><p>Pick lenses labelled UV400, choose larger frames that cover more of the eye area, and consider polarised lenses if you drive a lot — they cut glare from roads and water. Every design at Royal Vision is selected with both style and everyday protection in mind, and our team can guide you on WhatsApp if you are unsure which lens suits your routine.</p><h2>The bottom line</h2><p>Treat sunglasses as daily eye care, not a fashion extra. Wear them whenever you are outdoors in daylight — your future eyesight will thank you.</p>
@@ -48,7 +48,7 @@
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
     </div>
     <div>
       <h4>Categories</h4>
@@ -124,6 +124,19 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="pv" id="preview" aria-hidden="true">
+  <div class="pvbg" id="pvBg"></div>
+  <figure class="pvbox">
+    <button class="pvx" id="pvClose" aria-label="Close preview">✕</button>
+    <div class="pvstage" id="pvStage"><img id="pvImg" alt="Product picture preview"></div>
+    <figcaption class="pvcap">
+      <div class="pvinfo"><h3 id="pvName"></h3><div class="pvprice" id="pvPrice"></div></div>
+      <div class="pvtools"><button id="pvOut" aria-label="Zoom out">−</button><button id="pvReset">Reset</button><button id="pvIn" aria-label="Zoom in">+</button></div>
+      <div class="pvacts"><button class="pvadd" id="pvAdd">Add to Cart</button><a class="pvwa" id="pvWa" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+      <p class="pvhint">Picture par click karein to zoom hoga — zoom karke drag bhi kar sakte hain. Mobile par + / − buttons use karein.</p>
+    </figcaption>
+  </figure>
+</div>
 <script src="store.js"></script>
 </body>
 </html>

@@ -266,7 +266,7 @@ document.querySelectorAll("#mnav a").forEach(a=>a.addEventListener("click", ()=>
 /* ---------- Checkout ---------- */
 const modal = document.getElementById("modal");
 function itemsText(){
-  return Object.entries(cart).map(([id,q]) => { const p = byId(+id); return p.name + " x" + q + " — " + fmt(p.price*q); }).join("\n");
+  return Object.entries(cart).map(([id,q]) => { const p = byId(+id); return q > 1 ? p.name + " (Qty " + q + ") — " + fmt(p.price*q) : p.name + " — " + fmt(p.price); }).join("\n");
 }
 function renderSummary(){
   const rows = Object.entries(cart).map(([id,q]) => { const p = byId(+id); return `<div><span>${p.name} × ${q}</span><span>${fmt(p.price*q)}</span></div>`; }).join("");
@@ -366,3 +366,67 @@ document.getElementById("waOrderBtn").addEventListener("click", () => {
 });
 
 renderCart();
+
+/* ---------- Picture preview with zoom (all product cards) ---------- */
+const pv = document.getElementById("preview");
+let pvScale = 1, pvX = 0, pvY = 0, pvId = null;
+function pvApply(){ const im = document.getElementById("pvImg"); if(im) im.style.transform = "translate(" + pvX + "px," + pvY + "px) scale(" + pvScale + ")"; }
+function pvReset(){ pvScale = 1; pvX = 0; pvY = 0; pvApply(); }
+function openPreview(id){
+  const p = byId(id); if(!p || !pv) return; pvId = id;
+  document.getElementById("pvImg").src = imgSrc(p);
+  document.getElementById("pvName").textContent = p.name;
+  document.getElementById("pvPrice").textContent = fmt(p.price);
+  document.getElementById("pvAdd").dataset.add = id;
+  document.getElementById("pvWa").href = "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent("I want to order: " + p.name + " (" + fmt(p.price) + ")\nPicture: " + imgSrc(p));
+  pvReset(); pv.classList.add("open"); document.body.style.overflow = "hidden";
+}
+function closePreview(){ if(!pv) return; pv.classList.remove("open"); document.body.style.overflow = ""; }
+if (pv) {
+  document.getElementById("pvClose").addEventListener("click", closePreview);
+  document.getElementById("pvBg").addEventListener("click", closePreview);
+  document.addEventListener("keydown", e => { if(e.key === "Escape") closePreview(); });
+  document.getElementById("pvIn").addEventListener("click", () => { pvScale = Math.min(3.5, pvScale + 0.5); pvApply(); });
+  document.getElementById("pvOut").addEventListener("click", () => { pvScale = Math.max(1, pvScale - 0.5); if(pvScale === 1){ pvX = 0; pvY = 0; } pvApply(); });
+  document.getElementById("pvReset").addEventListener("click", pvReset);
+  const stage = document.getElementById("pvStage"), im = document.getElementById("pvImg");
+  im.addEventListener("click", () => { pvScale = pvScale > 1 ? 1 : 2; if(pvScale === 1){ pvX = 0; pvY = 0; } pvApply(); });
+  stage.addEventListener("wheel", e => { e.preventDefault(); pvScale = Math.min(3.5, Math.max(1, pvScale + (e.deltaY < 0 ? 0.25 : -0.25))); if(pvScale === 1){ pvX = 0; pvY = 0; } pvApply(); }, {passive:false});
+  let drag = null;
+  im.addEventListener("pointerdown", e => { if(pvScale > 1){ drag = {x: e.clientX - pvX, y: e.clientY - pvY}; im.setPointerCapture(e.pointerId); } });
+  im.addEventListener("pointermove", e => { if(drag){ pvX = e.clientX - drag.x; pvY = e.clientY - drag.y; pvApply(); } });
+  im.addEventListener("pointerup", () => { drag = null; });
+  document.getElementById("pvAdd").addEventListener("click", () => { closePreview(); openCart(); });
+}
+document.addEventListener("click", e => {
+  const ph = e.target.closest(".card .ph");
+  if (ph) { const card = ph.closest(".card"); const b = card && card.querySelector("[data-add]"); if (b) openPreview(+b.dataset.add); }
+});
+/* ---------- Catalog page (4 options) ---------- */
+const EYESIGHT = new Set([21, 22, 25, 26, 35, 38, 50, 51, 54, 55, 56, 60, 65]);
+function catGroup(p, g){
+  if (g === "sunglasses") return !EYESIGHT.has(p.id);
+  if (g === "eyesight") return EYESIGHT.has(p.id);
+  if (g === "ladies") return p.tag === "ladies";
+  return false;
+}
+const catGrid = document.getElementById("catalogGrid");
+if (catGrid) {
+  const lensPanel = document.getElementById("lensPanel");
+  function catCard(p){
+    return '<article class="card"><div class="ph"><img loading="lazy" src="' + imgSrc(p) + '" alt="' + p.name + '"></div><div class="bd"><h3>' + p.name + '</h3><div class="price">' + fmt(p.price) + ' <small>COD AVAILABLE</small></div><div class="acts"><button class="add" data-add="' + p.id + '">Add to Cart</button><a class="wa-ic" target="_blank" rel="noopener" aria-label="Order on WhatsApp" href="https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent("I want to order: " + p.name + " (" + fmt(p.price) + ")") + '">' + waSvg + '</a></div></div></article>';
+  }
+  function showCat(g){
+    document.querySelectorAll(".catopt").forEach(b => b.classList.toggle("on", b.dataset.cat === g));
+    if (g === "lenses") { catGrid.innerHTML = ""; catGrid.style.display = "none"; if(lensPanel) lensPanel.style.display = "block"; return; }
+    if (lensPanel) lensPanel.style.display = "none"; catGrid.style.display = "";
+    catGrid.innerHTML = PRODUCTS.filter(p => catGroup(p, g)).map(catCard).join("");
+  }
+  document.getElementById("catopts").addEventListener("click", e => {
+    const b = e.target.closest(".catopt"); if(!b) return;
+    showCat(b.dataset.cat);
+    document.getElementById("catalogGrid").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+  const h = (location.hash || "#sunglasses").slice(1);
+  showCat(["sunglasses","eyesight","lenses","ladies"].includes(h) ? h : "sunglasses");
+}

@@ -345,3 +345,39 @@ footer li{list-style:none;padding:4px 0}
   .herobanner h1{font-size:26px}
   .logo{font-size:.92rem}
 }
+
+/* --- catalog options + picture preview/zoom (24 Nov) --- */
+.catopts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.catopt{display:flex;flex-direction:column;align-items:center;gap:4px;padding:26px 12px;background:linear-gradient(160deg,#17171f,#101016);border:1px solid #2b2b36;border-radius:16px;color:#f3ead2;cursor:pointer;text-decoration:none;font-family:Jost,sans-serif;transition:border-color .2s,transform .2s}
+.catopt:hover{border-color:var(--gold);transform:translateY(-2px)}
+.catopt.on{border-color:var(--gold);background:linear-gradient(160deg,#241d0d,#141007);box-shadow:0 0 0 1px var(--gold) inset}
+.catopt .ci{font-size:34px;line-height:1}
+.catopt b{font-family:"Playfair Display",serif;font-size:19px;letter-spacing:.02em}
+.catopt small{color:#b7ae94;font-size:12.5px;letter-spacing:.06em}
+.lensbox{background:linear-gradient(160deg,#17171f,#101016);border:1px solid #2b2b36;border-radius:18px;padding:34px}
+.lensbox h3{font-family:"Playfair Display",serif;font-size:26px;color:#f3ead2;margin:0 0 10px}
+.lensbox p{color:#cfc7a8;line-height:1.7;max-width:720px}
+.lensgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:22px 0 26px}
+.lensgrid div{background:#0d0d12;border:1px solid #26262f;border-radius:12px;padding:16px}
+.lensgrid b{display:block;color:var(--gold);font-size:16px;margin-bottom:4px}
+.lensgrid span{color:#b7ae94;font-size:14px;line-height:1.5}
+.card .ph{cursor:zoom-in}
+.pv{position:fixed;inset:0;z-index:200;display:none}
+.pv.open{display:block}
+.pvbg{position:absolute;inset:0;background:rgba(3,3,6,.88)}
+.pvbox{position:relative;max-width:520px;margin:4vh auto;background:#101016;border:1px solid #33333f;border-radius:18px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column}
+.pvx{position:absolute;top:10px;right:10px;z-index:3;width:38px;height:38px;border-radius:50%;border:1px solid #444;background:rgba(10,10,14,.85);color:#f3ead2;font-size:17px;cursor:pointer}
+.pvstage{overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;min-height:300px}
+.pvstage img{max-width:100%;max-height:56vh;object-fit:contain;transition:transform .15s ease;cursor:zoom-in;touch-action:none}
+.pvcap{padding:16px 18px 18px}
+.pvinfo{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.pvinfo h3{font-family:"Playfair Display",serif;color:#f3ead2;font-size:21px;margin:0}
+.pvprice{color:var(--gold);font-weight:600;font-size:19px;white-space:nowrap}
+.pvtools{display:flex;gap:8px;margin:12px 0}
+.pvtools button{flex:1;padding:9px;background:#1b1b24;border:1px solid #34343f;color:#f3ead2;border-radius:10px;font-size:16px;cursor:pointer;font-family:Jost,sans-serif}
+.pvtools button:hover{border-color:var(--gold)}
+.pvacts{display:flex;gap:10px}
+.pvadd{flex:1;background:var(--gold);color:#0a0a0a;border:none;font-weight:600;letter-spacing:.5px;padding:13px;border-radius:30px;cursor:pointer;font-family:Jost,sans-serif;font-size:15px}
+.pvwa{flex:1;text-align:center;background:#1faa55;color:#fff;font-weight:600;letter-spacing:.5px;padding:13px;border-radius:30px;text-decoration:none;font-size:15px}
+.pvhint{color:#8f8871;font-size:12.5px;margin:12px 0 0;line-height:1.5}
+@media(max-width:760px){.catopts{grid-template-columns:repeat(2,1fr);gap:12px}.catopt{padding:20px 8px}.catopt .ci{font-size:28px}.catopt b{font-size:16px}.lensgrid{grid-template-columns:1fr}.pvbox{margin:2vh 10px}.pvstage img{max-height:50vh}}

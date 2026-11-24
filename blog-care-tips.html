@@ -15,13 +15,13 @@
 <header>
   <div class="wrap hbar">
     <a class="logo" href="index.html"><img class="logoimg" src="images/logo.jpg" alt="Royal Vision logo"><span>ROYAL VISION<small>SEE THE ROYAL STYLE</small></span></a>
-    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
     <div style="display:flex;gap:10px;align-items:center">
       <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
-  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 </header>
 <div class="pagehero"><div class="crumb">Blog · Care Tips</div><h1>How to Take Care of Your Sunglasses & Frames</h1><p>Good frames can last for years — if you treat them right.</p></div>
 <article class="article"><div class="heroimg"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/22-moscot-2500.jpg" alt="How to Take Care of Your Sunglasses & Frames"></div><h2>Clean them the right way</h2><p>Rinse your glasses under lukewarm water first to wash off dust, then clean with a drop of mild soap and dry with a clean microfiber cloth. Never use your shirt, tissue or dupatta — their fibres scratch lenses little by little.</p><h2>Always use the case</h2><p>The number one cause of broken frames is being sat on, stepped on, or crushed in a bag. When your glasses are not on your face, they belong in their case. Also avoid leaving them on a car dashboard — heat can warp frames and damage lens coatings.</p><h2>Two hands, always</h2><p>Taking glasses off with one hand bends the frame out of shape over time. Use both hands, and never rest sunglasses on top of your head — it stretches the arms and loosens the fit.</p><h2>Small fixes, done early</h2><p>A loose screw or a slightly bent arm is a two-minute fix today and a broken frame next month. Message us on WhatsApp if your Royal Vision frame ever needs adjustment advice — we are happy to help.</p>
@@ -48,7 +48,7 @@
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
     </div>
     <div>
       <h4>Categories</h4>
@@ -124,6 +124,19 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="pv" id="preview" aria-hidden="true">
+  <div class="pvbg" id="pvBg"></div>
+  <figure class="pvbox">
+    <button class="pvx" id="pvClose" aria-label="Close preview">✕</button>
+    <div class="pvstage" id="pvStage"><img id="pvImg" alt="Product picture preview"></div>
+    <figcaption class="pvcap">
+      <div class="pvinfo"><h3 id="pvName"></h3><div class="pvprice" id="pvPrice"></div></div>
+      <div class="pvtools"><button id="pvOut" aria-label="Zoom out">−</button><button id="pvReset">Reset</button><button id="pvIn" aria-label="Zoom in">+</button></div>
+      <div class="pvacts"><button class="pvadd" id="pvAdd">Add to Cart</button><a class="pvwa" id="pvWa" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+      <p class="pvhint">Picture par click karein to zoom hoga — zoom karke drag bhi kar sakte hain. Mobile par + / − buttons use karein.</p>
+    </figcaption>
+  </figure>
+</div>
 <script src="store.js"></script>
 </body>
 </html>

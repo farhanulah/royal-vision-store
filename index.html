@@ -15,13 +15,13 @@
 <header>
   <div class="wrap hbar">
     <a class="logo" href="index.html"><img class="logoimg" src="images/logo.jpg" alt="Royal Vision logo"><span>ROYAL VISION<small>SEE THE ROYAL STYLE</small></span></a>
-    <nav class="main"><a href="index.html" class="active">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <nav class="main"><a href="index.html" class="active">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
     <div style="display:flex;gap:10px;align-items:center">
       <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
-  <div class="mnav" id="mnav"><a href="index.html" class="active">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="mnav" id="mnav"><a href="index.html" class="active">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 </header>
 <section class="herobanner">
   <div class="wrap herobanner-in">
@@ -50,6 +50,17 @@
     <a class="catcard" href="shop.html?cat=aviator"><span class="ph"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/02-royal-vision-black-aviator-4000.jpg" alt="Aviator"></span><span class="lb"><span><h3>Aviator</h3><span>Timeless classic</span></span><span class="arrow">→</span></span></a>
     <a class="catcard" href="shop.html?cat=ladies"><span class="ph"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/18-celine-2500.jpg" alt="Ladies collection"></span><span class="lb"><span><h3>Ladies</h3><span>15 styles</span></span><span class="arrow">→</span></span></a>
     <a class="catcard" href="shop.html?cat=classic"><span class="ph"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/22-moscot-2500.jpg" alt="Classic frames"></span><span class="lb"><span><h3>Classic Frames</h3><span>24 styles</span></span><span class="arrow">→</span></span></a>
+  </div>
+</section>
+<section class="wrap">
+  <div class="eyebrow" style="text-align:center">Shop Catalog</div>
+  <h2 class="sec">Browse the Catalog</h2>
+  <p class="secsub">Apni category chunein — sirf wahi designs nazar ayenge. Kisi bhi product ki picture par click karein, bara preview aur zoom ke saath.</p>
+  <div class="catopts catopts-home">
+    <a class="catopt" href="catalog.html#sunglasses"><span class="ci">🕶️</span><b>Sunglasses</b><small>53 designs</small></a>
+    <a class="catopt" href="catalog.html#eyesight"><span class="ci">👓</span><b>Eyesight Frames</b><small>13 designs</small></a>
+    <a class="catopt" href="catalog.html#lenses"><span class="ci">🔍</span><b>Lenses</b><small>Power &amp; contact lenses</small></a>
+    <a class="catopt" href="catalog.html#ladies"><span class="ci">👩</span><b>Ladies Glasses</b><small>15 designs</small></a>
   </div>
 </section>
 <section class="wrap" id="featured">
@@ -163,7 +174,7 @@
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
     </div>
     <div>
       <h4>Categories</h4>
@@ -239,6 +250,19 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="pv" id="preview" aria-hidden="true">
+  <div class="pvbg" id="pvBg"></div>
+  <figure class="pvbox">
+    <button class="pvx" id="pvClose" aria-label="Close preview">✕</button>
+    <div class="pvstage" id="pvStage"><img id="pvImg" alt="Product picture preview"></div>
+    <figcaption class="pvcap">
+      <div class="pvinfo"><h3 id="pvName"></h3><div class="pvprice" id="pvPrice"></div></div>
+      <div class="pvtools"><button id="pvOut" aria-label="Zoom out">−</button><button id="pvReset">Reset</button><button id="pvIn" aria-label="Zoom in">+</button></div>
+      <div class="pvacts"><button class="pvadd" id="pvAdd">Add to Cart</button><a class="pvwa" id="pvWa" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+      <p class="pvhint">Picture par click karein to zoom hoga — zoom karke drag bhi kar sakte hain. Mobile par + / − buttons use karein.</p>
+    </figcaption>
+  </figure>
+</div>
 <script src="store.js"></script>
 </body>
 </html>

@@ -15,13 +15,13 @@
 <header>
   <div class="wrap hbar">
     <a class="logo" href="index.html"><img class="logoimg" src="images/logo.jpg" alt="Royal Vision logo"><span>ROYAL VISION<small>SEE THE ROYAL STYLE</small></span></a>
-    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <nav class="main"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
     <div style="display:flex;gap:10px;align-items:center">
       <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
-  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="mnav" id="mnav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html" class="active">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
 </header>
 <div class="pagehero"><div class="crumb">Blog · Style Guide</div><h1>How to Choose the Perfect Frame for Your Face Shape</h1><p>The secret to great-looking eyewear is balance — here is how to find yours.</p></div>
 <article class="article"><div class="heroimg"><img src="https://royalvisionstore.wordpress.com/wp-content/uploads/2026/11/01-royal-vision-gold-4500.jpg" alt="How to Choose the Perfect Frame for Your Face Shape"></div><h2>Find your face shape</h2><p>Look in a mirror and trace the outline of your face. Most faces fall into one of four families: round (soft curves, similar width and length), square (strong jaw, broad forehead), oval (balanced proportions), or heart (wider forehead, narrower chin). Once you know your shape, choosing a frame becomes easy.</p><h2>Round face — add angles</h2><p>Rectangular and square frames add definition to a round face. Aviator styles also work beautifully. Explore our Sunglasses and Classic Frames categories for structured shapes that sharpen your look.</p><h2>Square face — soften with curves</h2><p>Round and oval frames balance a strong jawline. Thin metal frames keep the look light and premium — a classic MOSCOT-style silhouette is a great place to start.</p><h2>Oval face — almost everything works</h2><p>An oval face suits most frame shapes. The only rule: keep the frame as wide as, or slightly wider than, the broadest part of your face. Bold designs like our PRADA and MAYBACH styles were made for you.</p><h2>Heart face — balance the chin</h2><p>Frames that are wider at the bottom, or light-coloured and rimless styles, balance a narrower chin. Ladies' cat-eye designs also lift the look wonderfully — see the Ladies category.</p><h2>Still unsure?</h2><p>Send us a photo on WhatsApp and we will suggest the frames that suit you — it is the same advice we give in store, free of charge.</p>
@@ -48,7 +48,7 @@
     </div>
     <div>
       <h4>Quick Links</h4>
-      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="catalog.html">Catalog</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
     </div>
     <div>
       <h4>Categories</h4>
@@ -124,6 +124,19 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="pv" id="preview" aria-hidden="true">
+  <div class="pvbg" id="pvBg"></div>
+  <figure class="pvbox">
+    <button class="pvx" id="pvClose" aria-label="Close preview">✕</button>
+    <div class="pvstage" id="pvStage"><img id="pvImg" alt="Product picture preview"></div>
+    <figcaption class="pvcap">
+      <div class="pvinfo"><h3 id="pvName"></h3><div class="pvprice" id="pvPrice"></div></div>
+      <div class="pvtools"><button id="pvOut" aria-label="Zoom out">−</button><button id="pvReset">Reset</button><button id="pvIn" aria-label="Zoom in">+</button></div>
+      <div class="pvacts"><button class="pvadd" id="pvAdd">Add to Cart</button><a class="pvwa" id="pvWa" target="_blank" rel="noopener">Order on WhatsApp</a></div>
+      <p class="pvhint">Picture par click karein to zoom hoga — zoom karke drag bhi kar sakte hain. Mobile par + / − buttons use karein.</p>
+    </figcaption>
+  </figure>
+</div>
 <script src="store.js"></script>
 </body>
 </html>
