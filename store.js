@@ -292,6 +292,7 @@ function getForm(){
   return {
     name: document.getElementById("fName").value.trim(),
     phone: document.getElementById("fPhone").value.trim(),
+    whatsapp: document.getElementById("fWhatsapp").value.trim(),
     address: document.getElementById("fAddress").value.trim(),
     city: document.getElementById("fCity").value.trim(),
     note: document.getElementById("fNote").value.trim()
@@ -303,6 +304,8 @@ function validate(f){
   mark("fName", !f.name); if(!f.name) bad.push("your name");
   const phoneOk = /^(\+92|0)?3\d{9}$/.test(f.phone.replace(/[\s-]/g,""));
   mark("fPhone", !phoneOk); if(!phoneOk) bad.push("a valid mobile number (e.g. 0307 4400002)");
+  const waOk = /^(\+92|0)?3\d{9}$/.test(f.whatsapp.replace(/[\s-]/g,""));
+  mark("fWhatsapp", !waOk); if(!waOk) bad.push("your WhatsApp number");
   mark("fAddress", !f.address); if(!f.address) bad.push("your complete address");
   mark("fCity", !f.city); if(!f.city) bad.push("your city");
   return bad;
@@ -313,7 +316,7 @@ function showErr(msg){
   e.scrollIntoView({behavior:"smooth", block:"center"});
 }
 function orderText(f, oid){
-  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nProduct Pictures:\n" + Object.entries(cart).map(([id,q]) => imgSrc(byId(+id))).join("\n") + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
+  return "New Order — Royal Vision" + (oid ? " (" + oid + ")" : "") + "\n\nItems:\n" + itemsText() + "\n\nProduct Pictures:\n" + Object.entries(cart).map(([id,q]) => imgSrc(byId(+id))).join("\n") + "\n\nTotal: " + fmt(cartTotal()) + " (Cash on Delivery)\n\nName: " + f.name + "\nMobile: " + f.phone + "\nWhatsApp: " + f.whatsapp + "\nAddress: " + f.address + "\nCity: " + f.city + (f.note ? "\nNote: " + f.note : "");
 }
 document.getElementById("orderForm").addEventListener("submit", async e => {
   e.preventDefault();
@@ -324,7 +327,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
   btn.disabled = true; btn.textContent = "Placing order…";
   const oid = "RV-" + Date.now().toString().slice(-8);
   try {
-    const res = await fetch("https://formsubmit.co/ajax/faisalsaim006@gmail.com", {
+    const res = await fetch("https://formsubmit.co/ajax/fk402273@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
@@ -333,6 +336,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
         order_id: oid,
         name: f.name,
         phone: f.phone,
+        whatsapp: f.whatsapp,
         address: f.address,
         city: f.city,
         note: f.note || "—",

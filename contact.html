@@ -27,7 +27,7 @@
 <section class="wrap"><div class="infogrid">
   <div class="infocard"><div class="ic">💬</div><h3>WhatsApp</h3><p>Sab se tez jawab WhatsApp par milta hai.<br><b style="color:#f3ead2">0307 4400002</b></p><a href="https://wa.me/923074400002?text=Assalam-o-Alaikum! I have a question about Royal Vision." target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">Chat Now →</a></div>
   <div class="infocard"><div class="ic">📍</div><h3>Visit Our Shop</h3><p><b style="color:#f3ead2">Mian Bazar Chung, Multan Road,<br>Lahore, Pakistan</b><br>Always open — tashreef layein ya online order karein.</p><a href="https://www.google.com/maps/search/?api=1&query=Mian+Bazar+Chung+Multan+Road+Lahore" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">Open in Maps →</a></div>
-  <div class="infocard"><div class="ic">✉️</div><h3>Email</h3><p>Orders aur sawalat ke liye email karein — har order ki tafseel isi email par jati hai.<br><b style="color:#f3ead2">faisalsaim006@gmail.com</b></p><a href="mailto:faisalsaim006@gmail.com" style="color:var(--gold);font-weight:600">Send Email →</a></div>
+  <div class="infocard"><div class="ic">✉️</div><h3>Email</h3><p>Orders aur sawalat ke liye email karein — har order ki tafseel isi email par jati hai.<br><b style="color:#f3ead2">fk402273@gmail.com</b></p><a href="mailto:fk402273@gmail.com" style="color:var(--gold);font-weight:600">Send Email →</a></div>
   <div class="infocard"><div class="ic">📘</div><h3>Facebook</h3><p>Nayi designs aur offers sab se pehle hamare Facebook page par aati hain.</p><a href="https://www.facebook.com/share/1FAjQRUiZz/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">Royal Vision →</a></div>
   <div class="infocard"><div class="ic">📸</div><h3>Instagram</h3><p>Latest styles aur reels ke liye Instagram par follow karein.</p><a href="https://www.instagram.com/mehar_saim84" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">@mehar_saim84 →</a></div>
   <div class="infocard"><div class="ic">🚚</div><h3>Delivery</h3><p>Poore Pakistan me delivery — payment <b style="color:#f3ead2">Cash on Delivery</b>, yani paisay tab jab parcel mil jaye.</p><a href="shop.html" style="color:var(--gold);font-weight:600">Shop Now →</a></div>
@@ -50,7 +50,7 @@ document.getElementById("contactForm").addEventListener("submit", async e => {
   const n = document.getElementById("cName").value.trim(), p = document.getElementById("cPhone").value.trim(), m = document.getElementById("cMsg").value.trim();
   if(!n || !p || !m) return;
   try {
-    await fetch("https://formsubmit.co/ajax/faisalsaim006@gmail.com", {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify({_subject:"Contact Message — Royal Vision", name:n, mobile:p, message:m})});
+    await fetch("https://formsubmit.co/ajax/fk402273@gmail.com", {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body: JSON.stringify({_subject:"Contact Message — Royal Vision", name:n, mobile:p, message:m})});
   } catch(_) {}
   document.getElementById("cOk").style.display = "block";
   e.target.reset();
@@ -92,7 +92,7 @@ document.getElementById("cWa").addEventListener("click", () => {
     <div>
       <h4>Get in Touch</h4>
       <a href="https://wa.me/923074400002" target="_blank" rel="noopener">WhatsApp: 0307 4400002</a>
-      <a href="mailto:faisalsaim006@gmail.com">Email: faisalsaim006@gmail.com</a>
+      <a href="mailto:fk402273@gmail.com">Email: fk402273@gmail.com</a>
       <a href="https://www.facebook.com/share/1FAjQRUiZz/" target="_blank" rel="noopener">Facebook: Royal Vision</a>
       <a href="https://www.instagram.com/mehar_saim84" target="_blank" rel="noopener">Instagram: @mehar_saim84</a>
       <span style="display:block;color:#b7ae94;margin-top:8px">📍 Mian Bazar Chung, Multan Road, Lahore, Pakistan</span>
@@ -133,6 +133,7 @@ document.getElementById("cWa").addEventListener("click", () => {
       <form id="orderForm" novalidate>
         <div class="f-field"><label for="fName">Your Name *</label><input id="fName" type="text" placeholder="e.g. Muhammad Ahmed" autocomplete="name"></div>
         <div class="f-field"><label for="fPhone">Mobile Number *</label><input id="fPhone" type="tel" placeholder="03XX XXXXXXX" autocomplete="tel"><div class="hint">Pakistani mobile — we will call this number to confirm.</div></div>
+        <div class="f-field"><label for="fWhatsapp">WhatsApp Number *</label><input id="fWhatsapp" type="tel" placeholder="03XX XXXXXXX" autocomplete="tel"><div class="hint">Your WhatsApp number — so we can reach you about your order.</div></div>
         <div class="f-field"><label for="fAddress">Complete Address *</label><textarea id="fAddress" rows="2" placeholder="House, street, area, landmark"></textarea></div>
         <div class="f-field"><label for="fCity">City *</label><input id="fCity" type="text" placeholder="e.g. Mardan"></div>
         <div class="f-field"><label for="fNote">Note (optional)</label><textarea id="fNote" rows="2" placeholder="Anything we should know?"></textarea></div>

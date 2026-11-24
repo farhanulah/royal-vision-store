@@ -307,3 +307,41 @@ footer li{list-style:none;padding:4px 0}
 .herobanner .stats b{display:block;font-family:var(--serif);font-size:25px;color:var(--gold)}
 .herobanner .stats span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#b7ae94}
 @media(max-width:640px){.herobanner{padding:70px 0 60px}.herobanner::before{background:linear-gradient(180deg,rgba(5,5,8,.84),rgba(5,5,8,.70))}}
+
+/* --- mobile friendly pass (24 Nov, Farhan's feedback) --- */
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:0 14px}
+  .offerbar{font-size:11px;padding:7px 8px;text-align:center;line-height:1.5}
+  .logo{font-size:1.02rem;letter-spacing:.13em}
+  .logo small{font-size:.48rem;letter-spacing:.3em}
+  .logoimg{width:38px;height:38px}
+  .cart-btn{padding:8px 11px;font-size:13px}
+  .herobanner{padding:54px 0 46px;background-position:70% center}
+  .herobanner h1{font-size:30px;line-height:1.16;margin:10px 0 12px}
+  .herobanner .sub{font-size:14.5px;line-height:1.6}
+  .herobanner .btns{gap:10px;margin-top:22px}
+  .herobanner .btns .btn{padding:12px 18px;font-size:13px}
+  .herobanner .stats{gap:18px;margin-top:26px}
+  .herobanner .stats b{font-size:19px}
+  .herobanner .stats span{font-size:10px}
+  section{padding:42px 0}
+  h2{font-size:25px !important}
+  .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card .bd{padding:10px}
+  .card h3{font-size:13.5px}
+  .card .price{font-size:15px}
+  .card .acts .add{font-size:12.5px;padding:9px 6px}
+  .pagehero{padding:40px 0 30px}
+  .pagehero h1{font-size:29px}
+  .pagehero p{font-size:14px}
+  .infogrid{grid-template-columns:1fr}
+  .drawer{width:92vw}
+  .modal .box{width:94vw;max-height:92vh}
+  .f-field input,.f-field textarea{font-size:16px}
+  .footlogo{width:54px;height:54px}
+}
+@media(max-width:380px){
+  .herobanner h1{font-size:26px}
+  .logo{font-size:.92rem}
+}
