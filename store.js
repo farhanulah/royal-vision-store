@@ -327,7 +327,7 @@ document.getElementById("orderForm").addEventListener("submit", async e => {
   btn.disabled = true; btn.textContent = "Placing order…";
   const oid = "RV-" + Date.now().toString().slice(-8);
   try {
-    const res = await fetch("https://formsubmit.co/ajax/fk402273@gmail.com", {
+    const res = await fetch("https://formsubmit.co/ajax/faisalsaim006@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
